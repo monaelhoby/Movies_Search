@@ -6,7 +6,7 @@ import Search from '../../components/Search/Search';
 
 class MovieSearch extends Component {
     state = {
-        movieId: 'tt1442449', // default imdb id (Spartacus)
+        movieId: 'tt1442449', 
         title: '',
         movie: {},
         searchResults: [],
@@ -34,7 +34,6 @@ componentDidUpdate(prevProps, prevState) {
             })
     }
 
- // we use a timeout to prevent the api request to fire immediately as we type
     timeout = null;
 
     searchMovie = (event) => {
@@ -62,7 +61,7 @@ componentDidUpdate(prevProps, prevState) {
             {
               movieId: item.imdbID,
                 isSearching: false,
-                title: "item.Title,"
+                title: item.Title,
             });
     }
 
